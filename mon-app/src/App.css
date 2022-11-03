@@ -30,13 +30,30 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
   color: white;
 }
 
 .card {
-  color:#282c34
+  color:#282c34;
+  margin-bottom: 4rem;
+}
+
+.gridCards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.card-img {
+  width: 24rem;
+  height: 18rem;
+  object-fit: cover;
 }
 
 .App-link {

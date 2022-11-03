@@ -1,35 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-function displayMeubles() {
-  let meubles = {
-    1: "chaise",
-    2: "table",
-    3: "tabouret",
-    4: "papier peint"
-  };
-  const arr = [];
-  for (let meuble in meubles) {
-      arr.push(
-        <Card style={{ width: '18rem' }} className='card'>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>{meubles[meuble]}</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
-      </Card>
-      );
-  }
-  return arr;
-}
-
+import Furnitures from './components/Furnitures';
 
 
 function App() {
@@ -51,9 +26,11 @@ function App() {
         </a>
       </header>
       <body className='App-body'>
-      
-          {displayMeubles()}
-        
+        <Row xs={1} md={3} className="gridCards">
+          {/* <CardGroup> */}
+        {Furnitures()}
+        {/* </CardGroup> */}
+        </Row>
       </body>
     </div>
   );
