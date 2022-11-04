@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+/* import logo from './logo.svg';
+ */import './App.css';
+import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from './components/Navbar';
 import { Container } from 'react-bootstrap';
