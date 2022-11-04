@@ -15,22 +15,21 @@ function CollapsibleExample() {
                 className='d-inline-block align-top'
                 />
                 
-
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
                 <Nav.Link href="#About us">A propos de nous</Nav.Link>
                 <Nav.Link href="#Nos nouveautés">Nos nouveautés</Nav.Link>
-                <NavDropdown title="Nos ateliers du moment" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown title="Recherche" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Meubles anciens</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
-                    Another action
+                    Art de la table
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#Contact">Something</NavDropdown.Item>
+                <NavDropdown.Item href="#Contact"></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
-                    Separated link
+                    Linge de maison
                 </NavDropdown.Item>
                 </NavDropdown>
             </Nav>
