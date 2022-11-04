@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import CardGroup from 'react-bootstrap/CardGroup';
+// import Button from 'react-bootstrap/Button';
+// import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Furnitures from './components/Furnitures';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
 
 
 function App() {
@@ -12,17 +14,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Button variant="danger">TEST</Button>
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        {/* <Button variant="danger">TEST</Button> */}
+        {Signin()}
+        {Signup()}
         <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          fraises
         </a>
       </header>
       <body className='App-body'>
