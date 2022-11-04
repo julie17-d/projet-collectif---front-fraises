@@ -23,7 +23,14 @@ function Furnitures() {
           </Card.Body>
           <Card.Footer>
           {json[meuble].price}€<br></br>
-          <Button variant="secondary">Add to cart</Button>
+          <Button variant="secondary" onClick={() => {
+          const object = {
+            "id": json[meuble]._id,
+            "title": json[meuble].title,
+            "price": json[meuble].price};
+          return console.log(object);
+          }}>Add to cart</Button>
+
           </Card.Footer>
         </Card>
         </Col>
