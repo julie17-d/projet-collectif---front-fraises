@@ -1,0 +1,49 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+function CollapsibleExample() {
+  return (
+    
+      <Container fluid>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
+            <Navbar.Brand  href="#home">
+                <img src="./Logo.png" alt="" 
+                width="70"
+                height="70"
+                className='d-inline-block align-top'
+                />
+                
+
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+                <Nav.Link href="#About us">A propos de nous</Nav.Link>
+                <Nav.Link href="#Nos nouveautés">Nos nouveautés</Nav.Link>
+                <NavDropdown title="Nos ateliers du moment" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                    Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#Contact">Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                    Separated link
+                </NavDropdown.Item>
+                </NavDropdown>
+            </Nav>
+            <Nav>
+                <Nav.Link href="#deets">Contacts</Nav.Link>
+                <Nav.Link eventKey={2} href="#memes">
+                Connexion
+                </Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+            </Navbar>
+      </Container>
+  );
+}
+
+export default CollapsibleExample;
