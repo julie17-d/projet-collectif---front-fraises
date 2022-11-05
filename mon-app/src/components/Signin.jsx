@@ -4,12 +4,12 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
 function Signin() {
-  const [show, setShow] = useState(false);
+    const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-  return (
+    return (
     <>
       <Button variant="primary" onClick={handleShow}>
         Sign in
@@ -31,7 +31,7 @@ function Signin() {
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+            <Form.Group className="mb-3" controlId="exampleForm.Control">
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type="password"
@@ -39,7 +39,7 @@ function Signin() {
                 autoFocus
               />
             </Form.Group>
-            
+
           </Form>
         </Modal.Body>
         <Modal.Footer>

@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Furnitures from './components/Furnitures';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
+import FilterList from './components/FilterList';
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
         {/* <Button variant="danger">TEST</Button> */}
         {Signin()}
         {Signup()}
+        {FilterList()}
         <a
           className="App-link"
           href="https://reactjs.org"
