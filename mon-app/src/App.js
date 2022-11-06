@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from 'react-bootstrap/Button';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Furnitures from './components/Furnitures';
 
-
 function App() {
+
+  //récupère les deux données du component Furnitures.jsx
+  const [furnitures, cart] = Furnitures()
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -26,10 +28,10 @@ function App() {
         </a>
       </header>
       <body className='App-body'>
+        {console.log(cart)}
+        {JSON.stringify(cart)}
         <Row xs={1} md={3} className="gridCards">
-          {/* <CardGroup> */}
-        {Furnitures()}
-        {/* </CardGroup> */}
+          {furnitures}
         </Row>
       </body>
     </div>
