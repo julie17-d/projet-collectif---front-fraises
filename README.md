@@ -1,6 +1,6 @@
 # projet-collectif---front-fraises 
 
-Front part with Julie D, Assetou, Faris and Alex.
+Frontend part with Julie D, Assetou, Faris and Alex.
 
 # Transition for the backend team:
 
@@ -10,4 +10,5 @@ Front part with Julie D, Assetou, Faris and Alex.
 npx create-react-app mon-app
 cd mon-app
 npm start
+
 
