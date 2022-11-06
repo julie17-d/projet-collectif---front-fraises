@@ -7,4 +7,7 @@ Front part with Julie D, Assetou, Faris and Alex.
 
 ```reactjs
 
+npx create-react-app mon-app
+cd mon-app
+npm start
 
