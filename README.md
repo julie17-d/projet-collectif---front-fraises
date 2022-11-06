@@ -34,4 +34,15 @@ git push -u origin main
 
 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
 
+git push origin --delete master
+
+
+# Start the server. In mon-app.
+
+```reactjs
+
+npm start
+
+```
+
 <p><img align="left" alt="gif" src="https://github.com/adatechschool/projet-collectif---front-fraises/blob/main/cat.gif" width="300" height="400" /></p>
