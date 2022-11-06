@@ -21,8 +21,12 @@ npm start
 npm install react-bootstrap bootstrap
 
 ```
+
+
+What we did for the setup (you don't have to do it again):
+
 - Master to main: (short version, else see : https://pythonforundergradengineers.com/how-to-change-a-github-repo-from-master-to-main.html)
-Clone the repo git clone git@github.com:adatechschool/projet-collectif---back-fraises.git
+Clone the repo git clone git@github.com:adatechschool/projet-collectif---font-fraises.git
 
 git branch -m master main
 
