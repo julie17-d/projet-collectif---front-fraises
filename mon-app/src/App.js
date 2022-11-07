@@ -4,6 +4,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Furnitures from "./components/Furnitures";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
+import logo from './logo.svg';
+import Row from 'react-bootstrap/Row';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
+import FilterList from './components/FilterList';
 
 function App() {
   //récupère les deux données du component Furnitures.jsx
@@ -11,10 +16,21 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <Navbar>
-        
-        </Navbar>
+      <Navbar>
+      </Navbar>
+
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        {Signin()}
+        {Signup()}
+        {FilterList()}
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        </a>
       </header>
 
       <body className="App-body">
