@@ -1,7 +1,7 @@
 [{   
     "_id": "oeihfzeoi",
     "title": "Table Delhia",
-    "type": "table",
+    "type": "tables",
     "description": "Fiable et élégante, cette table ne vous laissera jamais tomber. Grâce à elle, fancyness is your way.",
     "dimensions_cm": {
         "height": 70,
@@ -23,7 +23,7 @@
 {   
     "_id": "hgjauildo",
     "title": "Fauteuil Mehmet",
-    "type": "siège",
+    "type": "fauteuils",
     "description": "Confortable et cosy, ce fauteuil vous assurera une assise parfaite.",
     "dimensions_cm": {
         "height": 45,
@@ -45,7 +45,7 @@
 {   
     "_id": "hghuuildo",
     "title": "Canapé-lit Clémentine",
-    "type": "siège",
+    "type": "canapés",
     "description": "Que vous ayez une envie de vous assoupir ou de savourer une tasse de thé, le canapé-lit Clémentine sera toujours là pour combler vos besoins.",
     "dimensions_cm": {
         "height": 80,
@@ -67,7 +67,7 @@
 {   
     "_id": "hghppildo",
     "title": "Chaise à bascule Juanita",
-    "type": "siège",
+    "type": "fauteuils",
     "description": "Cette chaise à bascule, ou rocking chair dans sa version originale, saura ravir toutes les âmes d'enfants ! Rassurante et amusante.",
     "dimensions_cm": {
         "height": 90,
@@ -89,7 +89,7 @@
 {   
     "_id": "jjhppildo",
     "title": "Méridienne Julie",
-    "type": "siège",
+    "type": "canapés",
     "description": "Avec cette méridienne, vous pourrez vous affaler à n'importe quel moment de la journée. Idéal pour grignoter en lisant un livre.",
     "dimensions_cm": {
         "height": 50,
