@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Furnitures from "./components/Furnitures";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
-import logo from './logo.svg';
 import Row from 'react-bootstrap/Row';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
@@ -14,31 +13,34 @@ function App() {
   //récupère les deux données du component Furnitures.jsx
   const [furnitures, cartContent] = Furnitures();
 
+  //map sur cartContent pour afficher le contenu du panier
+  const displayCartContent = cartContent.map((meuble) => {
+    return (meuble.title + " " + meuble.price + "€")
+  })
+
   return (
     <div className="App">
-      <Navbar>
-      </Navbar>
+
 
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Navbar>
+        </Navbar>
+
         {Signin()}
         {Signup()}
         {FilterList()}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        </a>
+
+        {/* passe la const displayCartContent comme propriété de Cart pour afficher les meubles à l'intérieur du panier */}
+        <Cart cart={displayCartContent} />
       </header>
 
       <body className="App-body">
-        {console.log(cartContent)}
-  <Cart cart={JSON.stringify(cartContent)} /> 
+
+        {/* affiche meubles dans une grid */}
         <Row xs={1} md={3} className="gridCards">
           {furnitures}
         </Row>
+        
       </body>
     </div>
   );
