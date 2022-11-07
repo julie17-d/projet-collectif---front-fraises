@@ -1,5 +1,4 @@
 import "./App.css";
-import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Furnitures from "./components/Furnitures";
 import Navbar from "./components/Navbar";
@@ -40,7 +39,7 @@ function App() {
         <Row xs={1} md={3} className="gridCards">
           {furnitures}
         </Row>
-        
+
       </body>
     </div>
   );
