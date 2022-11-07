@@ -37,7 +37,7 @@ function App() {
 
         {/* affiche meubles dans une grid */}
         <Row xs={1} md={3} className="gridCards">
-          {furnitures}
+        {furnitures}
         </Row>
 
       </body>
