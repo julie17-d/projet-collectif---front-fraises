@@ -4,8 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Furnitures from "./components/Furnitures";
 import Navbar from "./components/Navbar";
 import Cart from "./components/Cart";
-import logo from './logo.svg';
-import Row from 'react-bootstrap/Row';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
 import FilterList from './components/FilterList';
@@ -20,7 +18,6 @@ function App() {
       </Navbar>
 
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         {Signin()}
         {Signup()}
         {FilterList()}
@@ -35,9 +32,9 @@ function App() {
 
       <body className="App-body">
         {console.log(cartContent)}
-  <Cart cart={JSON.stringify(cartContent)} /> 
+        <Cart cart={JSON.stringify(cartContent)} /> 
         <Row xs={1} md={3} className="gridCards">
-          {furnitures}
+        {furnitures}
         </Row>
       </body>
     </div>
