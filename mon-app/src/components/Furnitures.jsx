@@ -1,9 +1,7 @@
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import json from "../mock.json";
-import {useState} from "react";
-import {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 function Furnitures() {
@@ -12,11 +10,11 @@ function Furnitures() {
 
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:3001/api/furnitures").then((res) => {
-      console.log(res.data);
-      setData(res.data);
-    });
+    axios
+      .get("http://localhost:3001/api/furnitures")
+      .then((res) => setData(res.data));
   }, []);
+  console.log(data);
 
   //map sur les meubles
   const furnitures = data.map((item) => {
@@ -40,7 +38,7 @@ function Furnitures() {
             <Card.Text>{item.description}</Card.Text>
           </Card.Body>
           <Card.Footer>
-            {data.price}€<br></br>
+            {item.price}€<br></br>
             <Button
               variant="secondary"
               onClick={() => {
