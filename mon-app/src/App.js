@@ -11,6 +11,7 @@ import Success from './pages/Success';
 import CartProvider from './CartContext';
 import Row from 'react-bootstrap/Row';
 import Furnitures from './components/Furnitures';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
   
   return (
     <div className="App">
+<<<<<<< HEAD
       <CartProvider>
         <Container>
           <NavbarComponent></NavbarComponent>
@@ -35,6 +37,11 @@ function App() {
       <body className='App-body'>
         {console.log(cart)}
         {JSON.stringify(cart)}
+=======
+     
+      <body className='App-body'>
+        <Navbar></Navbar>
+>>>>>>> assetou
         <Row xs={1} md={3} className="gridCards">
           {furnitures}
         </Row>
