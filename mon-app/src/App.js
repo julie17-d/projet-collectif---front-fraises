@@ -11,10 +11,12 @@ import Success from './pages/Success';
 import CartProvider from './CartContext';
 import Row from 'react-bootstrap/Row';
 import Furnitures from './components/Furnitures';
-// localhost:3000 -> Home
-// localhost:3000/success -> Success
 
 function App() {
+
+  //récupère les deux données du component Furnitures.jsx
+  const [furnitures, cart] = Furnitures()
+  
   return (
     <div className="App">
       <CartProvider>
@@ -31,17 +33,14 @@ function App() {
       </CartProvider>
       
       <body className='App-body'>
-      <Row xs={1} md={3} className="gridCards">
-        {/* <CardGroup> */}
-      {Furnitures()}
-      {/* </CardGroup> */}
-      </Row>
-    </body>
-  </div>
-  )
-
-  }
-
-
+        {console.log(cart)}
+        {JSON.stringify(cart)}
+        <Row xs={1} md={3} className="gridCards">
+          {furnitures}
+        </Row>
+      </body>
+    </div>
+  );
+}
 
 export default App;
