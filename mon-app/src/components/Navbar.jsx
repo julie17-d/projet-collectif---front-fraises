@@ -2,8 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Furnitures from "./Furnitures";
+import Cart from "./Cart";
 
 function CollapsibleExample() {
+/*     const [furnitures, cartContent] = Furnitures(); */
   return (
     
       <Container fluid>
@@ -34,8 +37,10 @@ function CollapsibleExample() {
                 </NavDropdown>
             </Nav>
             <Nav>
+            {/* <Cart cart={JSON.stringify(cartContent)} /> */}
                 <Nav.Link href="#deets">Contacts</Nav.Link>
                 <Nav.Link eventKey={2} href="#memes">
+                
                 Connexion
                 </Nav.Link>
             </Nav>

@@ -12,12 +12,14 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Cart cart={JSON.stringify(cartContent)} />
+        <Navbar>
+        
+        </Navbar>
       </header>
 
       <body className="App-body">
         {console.log(cartContent)}
-        <Navbar></Navbar>
+  <Cart cart={JSON.stringify(cartContent)} /> 
         <Row xs={1} md={3} className="gridCards">
           {furnitures}
         </Row>
