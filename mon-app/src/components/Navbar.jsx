@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-=======
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
->>>>>>> 3bfb1a899bf2c548510b229217bafee9112011da
 
 function CollapsibleExample() {
   /*     const [furnitures, cartContent] = Furnitures(); */
