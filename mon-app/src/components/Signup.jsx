@@ -23,25 +23,34 @@ function Signup() {
           <Form>
             
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Your name</Form.Label>
+              <Form.Label>Your first name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="first and last name"
+                placeholder="First name"
+                autoFocus
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Your last name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Last name"
                 autoFocus
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>Your adress</Form.Label>
+              <Form.Label>Your Address</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="adress"
+                placeholder="Address"
                 autoFocus
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-              <Form.Label>Mobil number</Form.Label>
+              <Form.Label>Mobile number</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="xx xx xx xx xx"
