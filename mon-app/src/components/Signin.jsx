@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import React, {useEffect, useState} from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
+import axios from "axios";
 
 function Signin() {
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-    return (
+  return (
     <>
       <Button variant="primary" onClick={handleShow}>
         Sign in
@@ -21,7 +21,6 @@ function Signin() {
         </Modal.Header>
         <Modal.Body>
           <Form>
-
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
@@ -33,13 +32,8 @@ function Signin() {
 
             <Form.Group className="mb-3" controlId="exampleForm.Control">
               <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="password"
-                autoFocus
-              />
+              <Form.Control type="password" placeholder="password" autoFocus />
             </Form.Group>
-
           </Form>
         </Modal.Body>
         <Modal.Footer>

@@ -9,12 +9,12 @@ function Furnitures() {
   const [cart, setCart] = useState([]);
 
   const [data, setData] = useState([]);
+
   useEffect(() => {
     axios
       .get("http://localhost:3001/api/furnitures")
       .then((res) => setData(res.data));
   }, []);
-  console.log(data);
 
   //map sur les meubles
   const furnitures = data.map((item) => {
