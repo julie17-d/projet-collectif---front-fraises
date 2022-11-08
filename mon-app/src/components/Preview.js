@@ -1,5 +1,6 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import ViewDetails from "./ViewDetails";
 // import Col from 'react-bootstrap/Col';
 
 const Preview = ({ furniture }) => {
@@ -18,7 +19,7 @@ const Preview = ({ furniture }) => {
                 </Card.Body>
                 <Card.Footer>
                     {furniture.price.toLocaleString()} € <br />
-                    {/* Ajouter ici Add To Cart */}
+                    <ViewDetails furniture={furniture} />
                 </Card.Footer>
             </Card>
     );
