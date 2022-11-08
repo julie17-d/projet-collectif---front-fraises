@@ -80,5 +80,11 @@
 
 .filter {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
   flex-direction: column;
 }
