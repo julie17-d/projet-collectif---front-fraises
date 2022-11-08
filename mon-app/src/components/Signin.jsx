@@ -11,7 +11,7 @@ function Signin() {
 
     return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="outline-info" onClick={handleShow}>
         Sign in
       </Button>
 
@@ -43,10 +43,10 @@ function Signin() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="outline-danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="outline-success" onClick={handleClose}>
             Sign in
           </Button>
         </Modal.Footer>
