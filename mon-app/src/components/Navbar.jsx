@@ -14,30 +14,15 @@ function CollapsibleExample() {
           <img
             src="./Logo.png"
             alt=""
-            width="70"
-            height="70"
+            width="80"
+            height="80"
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#About us">A propos de nous</Nav.Link>
-            <Nav.Link href="#Nos nouveautés">Nos nouveautés</Nav.Link>
-            <NavDropdown title="Recherche" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
-                Meubles anciens
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Art de la table
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#Contact"></NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Linge de maison
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
+            <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link></Nav>
           <Nav>
             {/* <Cart cart={JSON.stringify(cartContent)} /> */}
             <Nav.Link>

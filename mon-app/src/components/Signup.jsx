@@ -11,7 +11,7 @@ function Signup() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button variant="outline-info" onClick={handleShow}>
         Sign up
       </Button>
 
@@ -78,10 +78,10 @@ function Signup() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="outline-danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="outline-success" onClick={handleClose}>
             Sign up
           </Button>
         </Modal.Footer>
