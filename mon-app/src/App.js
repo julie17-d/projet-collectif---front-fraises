@@ -23,12 +23,7 @@ function App() {
 
 
       <header className="App-header">
-        <Navbar>
-        </Navbar>
-
-        {Signin()}
-        {Signup()}
-        {FilterList()}
+        <Navbar />
 
         {/* passe la const displayCartContent comme propriété de Cart pour afficher les meubles à l'intérieur du panier */}
         {/* <Cart cart={displayCartContent} /> */}
