@@ -6,10 +6,18 @@ import axios from "axios";
 
 function Signup() {
   const [show, setShow] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
   const [user, setUser] = useState({});
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseSuccess = () => setShowSuccess(false);
+  const handleShowSuccess = () => setShowSuccess(true);
+
+  const handleCloseError = () => setShowError(false);
+  const handleShowError = () => setShowError(true);
 
   const handleChange = (event) => {
     if (event.target.name === "firstName") {
@@ -29,13 +37,17 @@ function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log("user : ");
-    // console.log(user);
-
-    axios.post("http://localhost:3001/api/auth/signup", {user}).then((res) => {
-      // console.log("res : ");
-      // console.log(res);
-    });
+    axios
+      .post("http://localhost:3001/api/auth/signup", {user})
+      .then((res) => {
+        handleClose();
+        handleShowSuccess();
+        return res;
+      })
+      .catch((error) => {
+        handleShowError();
+        console.log(error);
+      });
   };
 
   return (
@@ -43,6 +55,35 @@ function Signup() {
       <Button variant="outline-info" onClick={handleShow}>
         Sign up
       </Button>
+
+      <Modal show={showSuccess} onHide={handleCloseSuccess}>
+        <Modal.Header closeButton>
+          <Modal.Title>Inscription réussie !</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Vous êtes bien inscit.e, bravo ! ❤️</p>
+          <p>Vous pouvez désormais vous connecter au site.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="success" onClick={handleCloseSuccess}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showError} onHide={handleCloseError}>
+        <Modal.Header closeButton>
+          <Modal.Title>Inscription échouée ! 😥</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>L'inscription n'a pas réusssi, retentez votre coup !</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="warning" onClick={handleCloseError}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
