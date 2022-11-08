@@ -159,14 +159,6 @@ function Signup() {
             </Button>
           </Form>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="outline-danger" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="outline-success" onClick={handleClose}>
-            Sign up
-          </Button>
-        </Modal.Footer>
       </Modal>
     </>
   );

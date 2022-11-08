@@ -1,8 +1,8 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Furnitures from "./components/Furnitures";
-import FurnituresBis from "./components/FurnituresBis";
 import Navbar from "./components/Navbar";
+import FurnituresBis from "./components/FurnituresBis";
 
 function App() {
   //récupère les deux données du component Furnitures.jsx
