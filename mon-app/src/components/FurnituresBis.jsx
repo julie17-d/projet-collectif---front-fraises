@@ -28,7 +28,7 @@ const FurnituresBis = () => {
     <div className="container">
         <div className="filter">
             <Form.Select aria-label="Type de meuble" onChange={(e) => setTypeValue(e.target.value)}>
-                <option value="all">Tous les types de meubles</option>
+                <option value="all">Tous les types</option>
                 {typeList.map(function(object){
                         return  <option value={object}>{capitalize(object)}</option>
                     })}
@@ -40,7 +40,9 @@ const FurnituresBis = () => {
                     })}
             </Form.Select>
             <div className="price">
-                <input
+                <Form.Label>Prix :<br />jusqu'à {rangeValue} €</Form.Label>
+                <Form.Range
+                    id="rangePrice"
                     name="rangePrice"
                     type="range"
                     min="0"
@@ -49,7 +51,7 @@ const FurnituresBis = () => {
                     defaultValue={rangeValue}
                     onChange={(e) => setRangeValue(e.target.value)}
                 />
-                <label for="rangePrice">Prix :<br />jusqu'à {rangeValue} €</label>
+                {/* <label for="rangePrice">Prix :<br />jusqu'à {rangeValue} €</label> */}
             </div>
         </div>
         <div className="furnitures">
