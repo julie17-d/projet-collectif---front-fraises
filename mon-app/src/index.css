@@ -3,3 +3,20 @@
   padding:0;
   box-sizing: border-box;
 }
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #212529;
+  color: #F87;
+  width: 100%;
+}
+
+.footer a {
+  color: #F87;
+}
+
