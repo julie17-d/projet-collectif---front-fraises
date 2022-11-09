@@ -25,12 +25,15 @@ function CollapsibleExample() {
             <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link></Nav>
           <Nav>
             {/* <Cart cart={JSON.stringify(cartContent)} /> */}
-            <Nav.Link>
+            {/* <Nav.Link>
               <Signin />
             </Nav.Link>
             <Nav.Link>
               <Signup />
-            </Nav.Link>
+            </Nav.Link> */}
+            {/* <Cart cart={JSON.stringify(cartContent)} />  */}
+            {Signin()}
+            {Signup()}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
