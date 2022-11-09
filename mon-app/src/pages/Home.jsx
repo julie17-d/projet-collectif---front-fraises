@@ -1,6 +1,7 @@
 import React from 'react';
 import FurnituresBis from "../components/FurnituresBis";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 
 const Home = () => {
     return (
@@ -29,6 +30,7 @@ const Home = () => {
             {/* <Row xs={1} md={3} className="gridCards"> */}
             <FurnituresBis />
             {/* </Row> */}
+            <Footer />
 
             </body>
         </div>
