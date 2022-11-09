@@ -20,8 +20,8 @@ const Admin = () => {
                 <div className="container">
                     <h1>Bienvenue sur la page admin</h1>
                     <div className="categories-admin">
-                        <Users />
                         <AllFurnitures />
+                        <Users />
                     </div>
                 </div>
 

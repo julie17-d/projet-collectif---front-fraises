@@ -5,26 +5,26 @@ import ChangeStatus from './ChangeStatus';
 
 const ListFurniture =({ item }) => {
     let furnitureStatus = "";
+    let color = "";
     if(item.status.onSale===true){
-        furnitureStatus = "En ligne ✅"
+        furnitureStatus = "En ligne"
+        color="success"
     } else if(item.status.pending===true){
         furnitureStatus = "À valider"
+        color="warning"
     } else if(item.status.sold===true){
-        furnitureStatus = "Vendu";
+        furnitureStatus = "Vendu"
+        color="dark"
     }
     return (
-    <Card style={{ width: '20rem' }}>
-        <Card.Body>
-            <ListGroup variant="flush">
-            <ListGroup.Item><strong>Titre:</strong> {item.title}</ListGroup.Item>
-            <ListGroup.Item><strong>Prix:</strong> {item.price} €</ListGroup.Item>
-            </ListGroup>
-        </Card.Body>
-        <Card.Footer>
-        <ListGroup.Item><strong>{furnitureStatus}</strong></ListGroup.Item>
-        <ChangeStatus furniture={item} />
-        </Card.Footer>
-    </Card>
+        <Card style={{ width: 'fit-content' }}>
+        <ListGroup horizontal>
+            <ListGroup.Item><strong>{item.title}</strong></ListGroup.Item>
+            <ListGroup.Item><strong>Prix:</strong> {item.price.toLocaleString()} €</ListGroup.Item>
+            <ListGroup.Item variant={color}><strong>{furnitureStatus}</strong></ListGroup.Item>
+            <ChangeStatus furniture={item} />
+        </ListGroup>
+        </Card>
     );
 };
 
