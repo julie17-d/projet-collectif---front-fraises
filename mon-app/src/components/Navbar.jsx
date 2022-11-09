@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Signin from "./Signin";
 import Signup from "./Signup";
+import Button from 'react-bootstrap/Button';
 
 function CollapsibleExample() {
   /*     const [furnitures, cartContent] = Furnitures(); */
@@ -19,11 +20,13 @@ function CollapsibleExample() {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
+        <Nav.Link href="/">Anciens meubles pour une nouvelle vie</Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link></Nav>
+          <Nav.Item className="me-auto">
+          </Nav.Item>
           <Nav>
+              <Nav.Link href="/admin"><Button variant="outline-light">Page admin</Button></Nav.Link>
             {/* <Cart cart={JSON.stringify(cartContent)} /> */}
             {/* <Nav.Link>
               <Signin />

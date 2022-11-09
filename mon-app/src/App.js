@@ -1,20 +1,20 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import Furnitures from "./components/Furnitures";
+<<<<<<< HEAD
 import Navbar from "./components/Navbar";
 import FurnituresBis from "./components/FurnituresBis";
 import Footer from "./components/Footer"
+=======
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+>>>>>>> main
+
 
 function App() {
-  //récupère les deux données du component Furnitures.jsx
-  // const [furnitures, cartContent] = Furnitures();
-
-  //map sur cartContent pour afficher le contenu du panier
-  // const displayCartContent = cartContent.map((meuble) => {
-  //   return (meuble.title + " " + meuble.price + "€")
-  // })
-
   return (
+<<<<<<< HEAD
     <div className="App">
       <header className="App-header">
         <Navbar />
@@ -34,6 +34,15 @@ function App() {
 
       </body>
     </div>
+=======
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
+>>>>>>> main
   );
 }
 
