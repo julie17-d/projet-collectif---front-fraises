@@ -14,11 +14,13 @@ const AllUsers = () => {
     return (
         <div>
             <br />
-            <h4>Voici la liste des {user.length} users inscrit·e·s sur votre site :</h4>
+            <h3>Voici la liste des <u>{user.length} users</u> inscrit·e·s sur votre site :</h3>
             <br />
+            <div className="list">
             {user.map((user) => (
                 <ListUser user={user} />
             ))}
+            </div>
         </div>
     )
 };

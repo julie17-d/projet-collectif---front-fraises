@@ -17,7 +17,7 @@ const Admin = () => {
             </header>
 
             <body className="App-body">
-                <div className="container-admin">
+                <div className="container">
                     <h1>Bienvenue sur la page admin</h1>
                     <div className="categories-admin">
                         <Users />

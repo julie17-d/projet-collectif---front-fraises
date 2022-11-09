@@ -92,10 +92,13 @@
   padding: 20px;
 }
 
-.containers-admin {
+.list {
+  width: 90vw;
+  display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 @media (max-width: 900px) {
   .filter {
     flex-direction: column;

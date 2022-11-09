@@ -6,7 +6,7 @@ const AllUsers = () => {
     const [item, setItem] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/api/furnitures")
+        axios.get("http://localhost:3001/api/allFurnitures")
             .then((res) => setItem(res.data));
     }, []);
     console.log(item);
@@ -14,11 +14,13 @@ const AllUsers = () => {
     return (
         <div>
             <br />
-            <h4>Voici la liste des {item.length} meubles renseignés sur votre site :</h4>
+            <h3>Voici la liste des <u>{item.length} meubles</u> renseignés sur votre site :</h3>
             <br />
+            <div className="list">
             {item.map((item) => (
                 <ListFurniture item={item} />
             ))}
+            </div>
         </div>
     )
 };
