@@ -16,19 +16,22 @@ const ViewDetails = ({ furniture }) => {
        </Button>
        <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Item Details</Modal.Title>
+                <Modal.Title>Détails du produit</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <h3>{furniture.title}</h3>
-                <img className="item-img" src={furniture.pictureUrl}/>
+                <div>
+                 <h3>{furniture.title}</h3>
+                <img className="item-img" src={furniture.pictureUrl}/> 
+                </div>
                 <p> Type : {furniture.type}</p>
                 <p>Description : {furniture.description}</p>
-                <p>Color : {furniture.colors}</p>
-                <p>Materials : {furniture.materials}</p>
+                <p>Couleur: {furniture.colors}</p>
+                <p>Matériaux : {furniture.materials}</p>
+                <p>Dimensions : {furniture.dimensions_cm.toLocaleString()}</p>
             </Modal.Body>   
             <Modal.Footer>
                 {furniture.price.toLocaleString()} € <br />
-                <Cart > Add to Cart</Cart>
+                <Cart> Panier </Cart>
 
             </Modal.Footer>  
         </Modal>
