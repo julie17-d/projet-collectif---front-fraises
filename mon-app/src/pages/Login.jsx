@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
-function Signin() {
+function Login() {
   const [show, setShow] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -29,18 +29,14 @@ function Signin() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log(event);
     axios
       .post("http://localhost:3001/api/auth/login", {user})
       .then((res) => {
-        // On stocke le userId et le token dans le localStorage
-        // {
-        //    "userId": "63652721127d875bcd0ab07e",
-        //    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzY1MjcyMTEyN2Q4NzViY2QwYWIwN2UiLCJpYXQiOjE2Njc1NzM5NzYsImV4cCI6MTY2NzY2MDM3Nn0.SgVfVoG-O7CLRVdFYdkr5iv8EleOeMb1J4RaE_k1e-I"
-        // }
+        // On stocke le firstName, l'userId et le token dans le localStorage
         localStorage.setItem("user-info", JSON.stringify(res.data));
-        handleClose();
-        handleShowSuccess();
+        handleCloseSuccess();
+        // handleShowSuccess();
+        window.location.reload();
       })
       .catch((error) => {
         handleShowError();
@@ -119,4 +115,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Login;

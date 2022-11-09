@@ -2,16 +2,17 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Signin from "./Signin";
-import Signup from "./Signup";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import Button from "react-bootstrap/Button";
 
 function Header() {
   let user = JSON.parse(localStorage.getItem("user-info"));
   // console.log(user.firstName);
   function logOut() {
     localStorage.clear();
+    window.location.reload();
   }
-
   /*const [furnitures, cartContent] = Furnitures();*/
   return (
     <Container fluid>
@@ -25,23 +26,29 @@ function Header() {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
+        <Nav.Link href="/">Anciens meubles pour une nouvelle vie</Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link>
           </Nav>
           <Nav>
-            {/* <Cart cart={JSON.stringify(cartContent)} /> */}
-            {/* <Nav.Link>
-              <Signin />
+            <Nav.Link href="/admin">
+              <Button variant="outline-light">Page admin</Button>
             </Nav.Link>
-            <Nav.Link>
-              <Signup />
-            </Nav.Link> */}
-            {/* <Cart cart={JSON.stringify(cartContent)} />  */}
-            {Signin()}
-            {Signup()}
           </Nav>
+          {/* {!localStorage.getItem("user-info") ? (
+            <Nav>
+              {Login()}
+              {Signup()}
+            </Nav>
+          ) : null} */}
+          {!localStorage.getItem("user-info") ? (
+            <Nav>
+              {Login()}
+              {Signup()}
+            </Nav>
+          ) : null}
           {localStorage.getItem("user-info") ? (
             <Nav>
               <NavDropdown title={user.firstName}>
