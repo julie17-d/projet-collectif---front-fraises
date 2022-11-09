@@ -1,6 +1,7 @@
 import React from 'react';
 import Users from '../components/Users';
 import Navbar from "../components/Navbar";
+import AllFurnitures from '../components/AllFurnitures';
 
 const Admin = () => {
     return (
@@ -16,8 +17,13 @@ const Admin = () => {
             </header>
 
             <body className="App-body">
-
-            <Users />
+                <div className="container-admin">
+                    <h1>Bienvenue sur la page admin</h1>
+                    <div className="categories-admin">
+                        <Users />
+                        <AllFurnitures />
+                    </div>
+                </div>
 
             </body>
         </div>

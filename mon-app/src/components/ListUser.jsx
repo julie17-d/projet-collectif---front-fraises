@@ -1,8 +1,11 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 const ListUser =({ user }) => {
     return (
-        <p>{user.email}</p>
+        <Card bg="dark" border="secondary" text="light">
+        <Card.Body><strong> Nom:</strong> {user.lastName} <strong> Prénom:</strong> {user.firstName} <strong> Email:</strong> {user.email} </Card.Body>
+        </Card>
     );
 };
 
