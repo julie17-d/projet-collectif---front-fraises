@@ -9,6 +9,7 @@ const ViewDetails = ({ furniture }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
     return (
         <>
        <Button variant="primary" onClick={handleShow}>
@@ -27,7 +28,12 @@ const ViewDetails = ({ furniture }) => {
                 <p>Description : {furniture.description}</p>
                 <p>Couleur: {furniture.colors}</p>
                 <p>Matériaux : {furniture.materials}</p>
-                <p>Dimensions : {furniture.dimensions_cm.toLocaleString()}</p>
+                <p><ul> Dimensions : 
+                    <li>Hauteur (cm) : {furniture.dimensions_cm.height}</li>
+                    <li>Largeur (cm) : {furniture.dimensions_cm.width}</li>
+                    <li>Profondeur (cm) : {furniture.dimensions_cm.depth}</li>
+
+                </ul></p>
             </Modal.Body>   
             <Modal.Footer>
                 {furniture.price.toLocaleString()} € <br />

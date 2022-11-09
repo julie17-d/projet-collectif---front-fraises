@@ -9,8 +9,7 @@ function capitalize(string) {
 
 const typeList = ["assise", "literie", "table", "bureau", "rangement", "linge de maison", "décoration", "luminaire", "art de la table", "salle de bain", "autre"];
 
-const colorList = ["argent","beige","blanc","bleu","bois","bordeaux","doré","gris","jaune","marron","multicolore","noir","orange","rose","rouge","transparent","vert","violet","autre"]
-
+const colorList = ["argent","beige","blanc","bleu","bois","bordeaux","doré","gris","jaune","marron","multicolore","noir","orange","rose","rouge","transparent","vert","violet","autre"];
 
 const FurnituresBis = () => {
     const [data, setData] = useState([]);
@@ -23,7 +22,7 @@ const FurnituresBis = () => {
     .then((res) => setData(res.data));
     }, []);
     console.log(data);
-
+    
     return (
     <div className="container">
         <div className="filter">
