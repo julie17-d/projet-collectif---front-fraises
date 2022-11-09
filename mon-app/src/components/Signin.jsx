@@ -29,13 +29,18 @@ function Signin() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
     axios
       .post("http://localhost:3001/api/auth/login", {user})
       .then((res) => {
+        // On stocke le userId et le token dans le localStorage
+        // {
+        //    "userId": "63652721127d875bcd0ab07e",
+        //    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzY1MjcyMTEyN2Q4NzViY2QwYWIwN2UiLCJpYXQiOjE2Njc1NzM5NzYsImV4cCI6MTY2NzY2MDM3Nn0.SgVfVoG-O7CLRVdFYdkr5iv8EleOeMb1J4RaE_k1e-I"
+        // }
+        localStorage.setItem("user-info", JSON.stringify(res.data));
         handleClose();
         handleShowSuccess();
-        return res;
       })
       .catch((error) => {
         handleShowError();

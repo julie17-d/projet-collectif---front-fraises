@@ -5,8 +5,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Signin from "./Signin";
 import Signup from "./Signup";
 
-function CollapsibleExample() {
-  /*     const [furnitures, cartContent] = Furnitures(); */
+function Header() {
+  let user = JSON.parse(localStorage.getItem("user-info"));
+  // console.log(user.firstName);
+  function logOut() {
+    localStorage.clear();
+  }
+
+  /*const [furnitures, cartContent] = Furnitures();*/
   return (
     <Container fluid>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -22,7 +28,8 @@ function CollapsibleExample() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link></Nav>
+            <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link>
+          </Nav>
           <Nav>
             {/* <Cart cart={JSON.stringify(cartContent)} /> */}
             {/* <Nav.Link>
@@ -35,10 +42,17 @@ function CollapsibleExample() {
             {Signin()}
             {Signup()}
           </Nav>
+          {localStorage.getItem("user-info") ? (
+            <Nav>
+              <NavDropdown title={user.firstName}>
+                <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          ) : null}
         </Navbar.Collapse>
       </Navbar>
     </Container>
   );
 }
 
-export default CollapsibleExample;
+export default Header;
