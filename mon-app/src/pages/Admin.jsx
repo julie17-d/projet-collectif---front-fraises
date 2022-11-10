@@ -2,6 +2,7 @@ import React from "react";
 import Users from "../components/Users";
 import Navbar from "../components/Navbar";
 import AllFurnitures from "../components/AllFurnitures";
+import Footer from "../components/Footer";
 
 const Admin = () => {
     return (
@@ -20,7 +21,7 @@ const Admin = () => {
                         <Users />
                     </div>
                 </div>
-
+                <Footer />
             </body>
         </div>
     );

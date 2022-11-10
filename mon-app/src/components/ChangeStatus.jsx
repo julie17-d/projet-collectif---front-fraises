@@ -45,12 +45,11 @@ const ChangeStatus = ({ furniture }) => {
             </Modal.Header>
             <Modal.Body>
                 <h3>Êtes-vous sûr·e de vouloir changer le statut de l'élément suivant ?</h3>
-                <img className="item-img" src={furniture.pictureUrl}/>
-                <p> Type : {furniture.type}</p>
-                <p>Description : {furniture.description}</p>
-                <p>Color : {furniture.colors}</p>
-                <p>Materials : {furniture.materials}</p>
-                <p>Prix : {furniture.price} €</p>
+                <img class="img-fluid" src={furniture.pictureUrl}/>
+                <p><strong>Type : </strong>{furniture.type}</p>
+                <p><strong>Description : </strong>{furniture.description}</p>
+                <p><strong>Couleur : </strong>{furniture.colors}</p>
+                <p><strong>Prix : </strong>{furniture.price} €</p>
             </Modal.Body>   
             <Modal.Footer>
                 <Button variant="success" onClick={changeStatus}>
