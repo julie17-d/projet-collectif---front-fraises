@@ -17,8 +17,9 @@ const ListFurniture =({ item }) => {
         color="dark"
     }
     return (
-        <Card style={{ width: 'fit-content' }}>
-        <ListGroup horizontal>
+        <Card style={{ width: '20rem', height: 'fit-content'}}>
+        <ListGroup>
+            <ListGroup.Item variant="secondary">id: {item._id}</ListGroup.Item>
             <ListGroup.Item><strong>{item.title}</strong></ListGroup.Item>
             <ListGroup.Item><strong>Prix:</strong> {item.price.toLocaleString()} €</ListGroup.Item>
             <ListGroup.Item variant={color}><strong>{furnitureStatus}</strong></ListGroup.Item>

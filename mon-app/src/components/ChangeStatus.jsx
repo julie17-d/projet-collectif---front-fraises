@@ -10,20 +10,20 @@ const ChangeStatus = ({ furniture }) => {
     const handleShow = () => setShow(true);
 
     let action = "";
-    let params;
+    let body;
     if(furniture.status.onSale===true){
         action = "Indiquer comme vendu";
-        params = {onSale: false, sold: true};
+        body = {id: furniture._id, onSale: false, sold: true};
     } else if(furniture.status.pending===true){
         action = "Passer en ligne";
-        params = {onSale: true, pending: false};
+        body = {id: furniture._id, onSale: true, pending: false};
     } else if(furniture.status.sold===true){
-        action = "Vous ne pouvez pas modifier le status"
+        action = "Vous ne pouvez pas modifier le status";
     }
 
     const changeStatus= () =>
         axios
-        .post("http://localhost:3001/api/changeStatus", {params})
+        .put("http://localhost:3001/api/changeStatus", {body})
         .then((res) => {
             handleClose();
             return res;

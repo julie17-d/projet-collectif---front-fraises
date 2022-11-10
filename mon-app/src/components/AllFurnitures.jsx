@@ -12,11 +12,11 @@ const AllUsers = () => {
     console.log(item);
 
     return (
-        <div className="list">
+        <div>
             <br />
             <h3>Voici la liste des <u>{item.length} meubles</u> renseignés sur votre site :</h3>
             <br />
-            <div>
+            <div className="list">
             {item.map((item) => (
                 <ListFurniture item={item} />
             ))}
