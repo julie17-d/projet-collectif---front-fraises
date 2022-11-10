@@ -5,13 +5,13 @@ import Cart from "./Cart";
 
 const Preview = ({ furniture }) => {
     return (
-            <Card style={{ width: '24rem' }} className='card' border="secondary" bg="light" text="dark">
+            <Card style={{ width: '24rem'}} className='card' border="secondary" bg="light" text="dark">
                 <Card.Header>
                     <Card.Title>
                         <h3>{furniture.title}</h3>
                     </Card.Title>
                 </Card.Header>
-                <Card.Img className="card-img" src={furniture.pictureUrl} variant="top" />
+                <Card.Img className="card-img" src={furniture.pictureUrl} variant="center" />
                 <Card.Body>
                     <Card.Text>
                         {furniture.description}
