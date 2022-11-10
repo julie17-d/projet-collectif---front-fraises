@@ -5,6 +5,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Button from "react-bootstrap/Button";
+import Cart from "../components/Cart";
+// import CartContent from "./CartContent";
 
 function Header() {
   let user = "";
@@ -16,7 +18,7 @@ function Header() {
     localStorage.clear();
     window.location.href = "/home";
   }
-  /*const [furnitures, cartContent] = Furnitures();*/
+
   return (
     <Container fluid>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -34,6 +36,12 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>
+          <Nav.Link>
+          <Cart />
+          </Nav.Link>
+          {/* <Nav.Link>
+            <CartContent />
+          </Nav.Link> */}
           {user.userId === "636cc8e2eef732132cc57a9a" ? (
           <Nav>
             <Nav>
@@ -41,7 +49,7 @@ function Header() {
               <Button variant="outline-light">Page admin</Button>
             </Nav.Link>
           </Nav>
-            </Nav>
+          </Nav>
           ) : null}
           {!localStorage.getItem("user-info") ? (
             <Nav>

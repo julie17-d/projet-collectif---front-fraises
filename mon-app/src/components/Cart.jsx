@@ -1,17 +1,24 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+// import ValidCart from "./ValidCart";
 
-function Cart(props) {
+
+function Cart() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  let cartContent;
+  if(localStorage.getItem("cart")){
+    cartContent = JSON.parse(localStorage.getItem("cart"));
+  }
+  // const cartContent = JSON.parse(localStorage.getItem("cart"));
 
   return (
     <>
+
       <Button variant="secondary" onClick={handleShow}>
-        Panier
+        Voir mon panier
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
@@ -19,8 +26,15 @@ function Cart(props) {
           <Offcanvas.Title>Panier</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* propriété cart, qui stockera le contenu du panier */}
-          {props.cart}
+      <div>
+      {cartContent.map((item) => (
+      <div><h6>{item.title} : {item.price} €</h6></div>
+      ))}
+      </div>
+      <div>
+      <Button variant="secondary">Valider mon panier et payer</Button>
+      </div>
+        
         </Offcanvas.Body>
       </Offcanvas>
     </>

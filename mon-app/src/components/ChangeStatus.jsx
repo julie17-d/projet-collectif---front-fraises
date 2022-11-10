@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Button from 'react-bootstrap/esm/Button';
 import Modal from "react-bootstrap/Modal";
 import axios from 'axios';
@@ -53,7 +53,7 @@ const ChangeStatus = ({ furniture }) => {
             </Modal.Header>
             <Modal.Body>
                 <h3>Êtes-vous sûr·e de vouloir changer le statut de l'élément suivant ?</h3>
-                <img class="img-fluid" src={furniture.pictureUrl}/>
+                <img class="img-fluid" src={furniture.pictureUrl} alt={furniture.title}/>
                 <p><strong>Type : </strong>{furniture.type}</p>
                 <p><strong>Description : </strong>{furniture.description}</p>
                 <p><strong>Couleur : </strong>{furniture.colors}</p>
