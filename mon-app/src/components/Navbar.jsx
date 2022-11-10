@@ -7,7 +7,10 @@ import Signup from "../pages/Signup";
 import Button from "react-bootstrap/Button";
 
 function Header() {
-  let user = JSON.parse(localStorage.getItem("user-info"));
+  let user = "";
+  if(JSON.parse(localStorage.getItem("user-info"))!==null){
+    user = JSON.parse(localStorage.getItem("user-info"));
+  };
   // console.log(user.firstName);
   function logOut() {
     localStorage.clear();
@@ -31,11 +34,15 @@ function Header() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
           </Nav>
+          {user.userId === "636cc8e2eef732132cc57a9a" ? (
           <Nav>
-            <Nav.Link href="/admin">
+            <Nav>
+              <Nav.Link href="/admin">
               <Button variant="outline-light">Page admin</Button>
             </Nav.Link>
           </Nav>
+            </Nav>
+          ) : null}
           {!localStorage.getItem("user-info") ? (
             <Nav>
               {Login()}
