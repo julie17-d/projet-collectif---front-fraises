@@ -21,9 +21,10 @@ const ChangeStatus = ({ furniture }) => {
         action = "Vous ne pouvez pas modifier le status";
     }
 
-    const changeStatus= () =>
+    const changeStatus = (event) => {
+        event.preventDefault();
         axios
-        .put("http://localhost:3001/api/changeStatus", {body})
+        .put("http://localhost:3001/api/updatestatus", {body})
         .then((res) => {
             handleClose();
             return res;
@@ -31,7 +32,8 @@ const ChangeStatus = ({ furniture }) => {
         .catch((error) => {
             console.log(error);
         });
-
+    };
+    
     return (
         <>
         <Button variant="primary" onClick={handleShow}>
@@ -51,7 +53,7 @@ const ChangeStatus = ({ furniture }) => {
                 <p>Prix : {furniture.price} €</p>
             </Modal.Body>   
             <Modal.Footer>
-                <Button variant="success" onClick={handleClose}>
+                <Button variant="success" onClick={changeStatus}>
                 {action}
                 </Button>
             </Modal.Footer>  
@@ -59,4 +61,4 @@ const ChangeStatus = ({ furniture }) => {
         </> )
 };
 
-export default ChangeStatus; 
+export default ChangeStatus;
