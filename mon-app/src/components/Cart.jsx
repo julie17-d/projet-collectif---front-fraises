@@ -16,14 +16,9 @@ function Cart() {
 
   return (
     <>
-<<<<<<< HEAD
 
-      <Button variant="secondary" onClick={handleShow}>
-        Voir mon panier
-=======
       <Button variant="outline-dark" onClick={handleShow}>
-        Panier
->>>>>>> main
+      Voir mon panier
       </Button>
 
       <Offcanvas show={show} onHide={handleClose}>
