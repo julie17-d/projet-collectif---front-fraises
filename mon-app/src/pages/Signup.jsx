@@ -40,7 +40,7 @@ function Signup() {
     axios
       .post("http://localhost:3001/api/auth/signup", {user})
       .then((res) => {
-        handleCloseSuccess();
+        handleClose();
         handleShowSuccess();
         return res;
       })

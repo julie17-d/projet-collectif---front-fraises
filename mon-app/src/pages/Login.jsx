@@ -34,7 +34,7 @@ function Login() {
       .then((res) => {
         // On stocke le firstName, l'userId et le token dans le localStorage
         localStorage.setItem("user-info", JSON.stringify(res.data));
-        handleCloseSuccess();
+        handleClose();
         // handleShowSuccess();
         window.location.reload();
       })

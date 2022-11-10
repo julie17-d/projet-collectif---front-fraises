@@ -59,7 +59,7 @@ function AddFurniture() {
       ? stringList.split(",")
       : stringList.split(" ")
       ? stringList.split(" ")
-      : null;
+      : stringList;
   }
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -103,7 +103,7 @@ function AddFurniture() {
     axios
       .post("http://localhost:3001/api/addFurniture", {furniture})
       .then((res) => {
-        handleCloseSuccess();
+        handleClose();
         handleShowSuccess();
         return res;
       })
@@ -154,11 +154,14 @@ function AddFurniture() {
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group>
-              <Form.Label>Type de meuble</Form.Label>
+              <Form.Label>Type</Form.Label>
               <Form.Select
                 aria-label="Type de meuble"
                 onChange={(e) => setTypeValue(e.target.value)}
               >
+                <option selected disabled>
+                  Tous les types
+                </option>
                 {typeList.map(function (object) {
                   return <option value={object}>{capitalize(object)}</option>;
                 })}
@@ -176,11 +179,14 @@ function AddFurniture() {
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label>Choix de la couleur</Form.Label>
+              <Form.Label>Couleur</Form.Label>
               <Form.Select
                 aria-label="Couleur du meuble"
                 onChange={(e) => setColorValue(e.target.value)}
               >
+                <option selected disabled>
+                  Choisissez une couleur
+                </option>
                 {colorList.map(function (object) {
                   return <option value={object}>{capitalize(object)}</option>;
                 })}
