@@ -30,7 +30,6 @@ function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>Anciens meubles pour une nouvelle vie</Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link href="/admin">
