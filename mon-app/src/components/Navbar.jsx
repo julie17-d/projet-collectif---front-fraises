@@ -2,12 +2,21 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Signin from "./Signin";
-import Signup from "./Signup";
-import Button from 'react-bootstrap/Button';
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import Button from "react-bootstrap/Button";
 
-function CollapsibleExample() {
-  /*     const [furnitures, cartContent] = Furnitures(); */
+function Header() {
+  let user = "";
+  if(JSON.parse(localStorage.getItem("user-info"))!==null){
+    user = JSON.parse(localStorage.getItem("user-info"));
+  };
+  // console.log(user.firstName);
+  function logOut() {
+    localStorage.clear();
+    window.location.reload();
+  }
+  /*const [furnitures, cartContent] = Furnitures();*/
   return (
     <Container fluid>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -23,25 +32,34 @@ function CollapsibleExample() {
         <Nav.Link href="/">Anciens meubles pour une nouvelle vie</Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav.Item className="me-auto">
-          </Nav.Item>
-          <Nav>
-              <Nav.Link href="/admin"><Button variant="outline-light">Page admin</Button></Nav.Link>
-            {/* <Cart cart={JSON.stringify(cartContent)} /> */}
-            {/* <Nav.Link>
-              <Signin />
-            </Nav.Link>
-            <Nav.Link>
-              <Signup />
-            </Nav.Link> */}
-            {/* <Cart cart={JSON.stringify(cartContent)} />  */}
-            {Signin()}
-            {Signup()}
+          <Nav className="me-auto">
           </Nav>
+          {user.userId === "636cc8e2eef732132cc57a9a" ? (
+          <Nav>
+            <Nav>
+              <Nav.Link href="/admin">
+              <Button variant="outline-light">Page admin</Button>
+            </Nav.Link>
+          </Nav>
+            </Nav>
+          ) : null}
+          {!localStorage.getItem("user-info") ? (
+            <Nav>
+              {Login()}
+              {Signup()}
+            </Nav>
+          ) : null}
+          {localStorage.getItem("user-info") ? (
+            <Nav>
+              <NavDropdown title={user.firstName}>
+                <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          ) : null}
         </Navbar.Collapse>
       </Navbar>
     </Container>
   );
 }
 
-export default CollapsibleExample;
+export default Header;
