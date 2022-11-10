@@ -4,8 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
 
 function App() {
   return (

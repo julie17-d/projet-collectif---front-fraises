@@ -37,12 +37,6 @@ function Header() {
               <Button variant="outline-light">Page admin</Button>
             </Nav.Link>
           </Nav>
-          {/* {!localStorage.getItem("user-info") ? (
-            <Nav>
-              {Login()}
-              {Signup()}
-            </Nav>
-          ) : null} */}
           {!localStorage.getItem("user-info") ? (
             <Nav>
               {Login()}
