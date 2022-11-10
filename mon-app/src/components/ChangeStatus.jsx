@@ -13,20 +13,28 @@ const ChangeStatus = ({ furniture }) => {
     let body;
     if(furniture.status.onSale===true){
         action = "Indiquer comme vendu";
-        body = {id: furniture._id, onSale: false, sold: true};
     } else if(furniture.status.pending===true){
         action = "Passer en ligne";
-        body = {id: furniture._id, onSale: true, pending: false};
     } else if(furniture.status.sold===true){
         action = "Vous ne pouvez pas modifier le status";
     }
 
     const changeStatus = (event) => {
-        event.preventDefault();
+        if(furniture.status.onSale===true){
+            body = {id: furniture._id, onSale: false, sold: true};
+            console.log(body);
+        } else if(furniture.status.pending===true){
+            body = {id: furniture._id, onSale: true, pending: false};
+            console.log(body);
+        } else {
+            console.log("error");
+        }
+
         axios
-        .put("http://localhost:3001/api/updatestatus", {body})
+        .put("http://localhost:3001/api/updatestatus", body)
         .then((res) => {
             handleClose();
+            window.location.reload();
             return res;
         })
         .catch((error) => {
