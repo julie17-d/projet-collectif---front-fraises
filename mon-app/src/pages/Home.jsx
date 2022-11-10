@@ -12,10 +12,11 @@ const Home = () => {
     // const displayCartContent = cartContent.map((meuble) => {
     //   return (meuble.title + " " + meuble.price + "€")
     // })
-
+    <div>
+<Navbar />
     <div className="App">
       <header className="App-header">
-        <Navbar />
+
 
         {/* passe la const displayCartContent comme propriété de Cart pour afficher les meubles à l'intérieur du panier */}
         {/* <Cart cart={displayCartContent} /> */}
@@ -28,6 +29,7 @@ const Home = () => {
         {/* </Row> */}
         <Footer />
       </body>
+    </div>
     </div>
   );
 };

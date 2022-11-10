@@ -44,7 +44,7 @@ const ChangeStatus = ({ furniture }) => {
     
     return (
         <>
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="outline-dark" onClick={handleShow}>
         Changer le statut
         </Button>
         <Modal show={show} onHide={handleClose}>
@@ -60,7 +60,7 @@ const ChangeStatus = ({ furniture }) => {
                 <p><strong>Prix : </strong>{furniture.price} €</p>
             </Modal.Body>   
             <Modal.Footer>
-                <Button variant="success" onClick={changeStatus}>
+                <Button variant="outline-dark" onClick={changeStatus}>
                 {action}
                 </Button>
             </Modal.Footer>  

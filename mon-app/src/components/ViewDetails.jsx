@@ -19,10 +19,10 @@ const ViewDetails = ({ furniture }) => {
 
     return (
         <>
-       <Button variant="primary" onClick={handleShow}>
+       <Button variant="outline-dark" onClick={handleShow}>
         View Details
        </Button>
-       <Modal show={show} onHide={handleClose}>
+       <Modal show={show} onHide={handleClose} border="secondary" bg="light" text="dark">
             <Modal.Header closeButton>
                 <Modal.Title>Détails du produit</Modal.Title>
             </Modal.Header>
@@ -32,7 +32,7 @@ const ViewDetails = ({ furniture }) => {
                 <div>
                     <img src={furniture.pictureUrl} class="img-fluid" alt={furniture.title}/> </div>
                 </div>
-                <p> <strong>Type : </strong>Type : {furniture.type}</p>
+                <p> <strong>Type : </strong>{furniture.type}</p>
                 <p><strong>Description : </strong>{furniture.description}</p>
                 <p><strong>Couleur: </strong>{furniture.colors}</p>
                 <p><strong>Matériaux : </strong>{arrayToString(furniture.materials)}</p>

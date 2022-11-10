@@ -34,7 +34,7 @@ function Login() {
       .then((res) => {
         // On stocke le firstName, l'userId et le token dans le localStorage
         localStorage.setItem("user-info", JSON.stringify(res.data));
-        handleCloseSuccess();
+        handleClose();
         // handleShowSuccess();
         window.location.reload();
       })
@@ -46,7 +46,7 @@ function Login() {
 
   return (
     <>
-      <Button variant="outline-info" onClick={handleShow}>
+      <Button variant="outline-dark" onClick={handleShow}>
         Sign in
       </Button>
       <Modal show={showSuccess} onHide={handleCloseSuccess}>
@@ -58,7 +58,7 @@ function Login() {
           <p>Vous pouvez désormais naviguer dans le site.</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleCloseSuccess}>
+          <Button variant="outline-dark" onClick={handleCloseSuccess}>
             Close
           </Button>
         </Modal.Footer>
@@ -71,19 +71,19 @@ function Login() {
           <p>La connexion n'a pas réusssi, retentez votre coup !</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={handleCloseError}>
-            Close
+          <Button variant="outline-dark" onClick={handleCloseError}>
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Sign in</Modal.Title>
+          <Modal.Title>Se connecter</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Adresse mail</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="name@example.com"
@@ -93,20 +93,20 @@ function Login() {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.Control">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="password"
+                placeholder="motdepasse"
                 name="password"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
+            <Button variant="outline-dark" onClick={handleClose}>
+              Fermer
             </Button>
-            <Button variant="primary" type="submit" value="Sign in">
-              Sign in
+            <Button variant="outline-dark" type="submit" value="Sign in">
+              Se connecter
             </Button>
           </Form>
         </Modal.Body>
