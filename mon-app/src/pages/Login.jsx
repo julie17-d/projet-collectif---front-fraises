@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
 
-function Signin() {
+function Login() {
   const [show, setShow] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -29,13 +29,14 @@ function Signin() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
     axios
       .post("http://localhost:3001/api/auth/login", {user})
       .then((res) => {
-        handleClose();
-        handleShowSuccess();
-        return res;
+        // On stocke le firstName, l'userId et le token dans le localStorage
+        localStorage.setItem("user-info", JSON.stringify(res.data));
+        handleCloseSuccess();
+        // handleShowSuccess();
+        window.location.reload();
       })
       .catch((error) => {
         handleShowError();
@@ -114,4 +115,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Login;
