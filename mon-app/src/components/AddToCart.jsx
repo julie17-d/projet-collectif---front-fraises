@@ -16,7 +16,7 @@ const AddToCart = ({ furniture }) => {
 
     return (
         <div>
-        <Button variant="primary" onClick={() => {
+        <Button variant="outline-dark" onClick={() => {
               //onclick, crée un object avec infos du meuble...
             const object = {
                 userId: user.id,

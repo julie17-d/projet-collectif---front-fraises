@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import ViewDetails from "./ViewDetails";
 import AddToCart from "./AddToCart";
 
-const Preview = ({ furniture }, { cart }) => {
+const Preview = ({ furniture }) => {
     return (
             <Card style={{ width: '24rem'}} className='card' border="secondary" bg="light" text="dark">
                 <Card.Header>
@@ -20,7 +20,7 @@ const Preview = ({ furniture }, { cart }) => {
                 <Card.Footer>
                     {furniture.price.toLocaleString()} € <br />
                     <ViewDetails furniture={furniture} />
-                    <AddToCart furniture={furniture} cart={cart} />
+                    <AddToCart furniture={furniture} />
                 </Card.Footer>
             </Card>
     );
