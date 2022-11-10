@@ -127,7 +127,7 @@ function AddFurniture() {
           <p>Vous avez bien ajouté votre meuble, bravo ! ❤️</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleCloseSuccess}>
+          <Button variant="outline-dark" onClick={handleCloseSuccess}>
             Fermer
           </Button>
         </Modal.Footer>
@@ -141,7 +141,7 @@ function AddFurniture() {
           <p>L'ajout de votre meuble n'a pas réusssi, retentez votre coup !</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={handleCloseError}>
+          <Button variant="outline-dark" onClick={handleCloseError}>
             Fermer
           </Button>
         </Modal.Footer>
@@ -253,10 +253,10 @@ function AddFurniture() {
                 autoFocus
               />
             </Form.Group>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="outline-dark" onClick={handleClose}>
               Fermer
             </Button>
-            <Button variant="primary" type="submit" value="Sign up">
+            <Button variant="outline-dark" type="submit" value="Sign up">
               Ajouter
             </Button>
           </Form>

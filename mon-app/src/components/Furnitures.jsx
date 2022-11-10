@@ -38,15 +38,15 @@
 //             {item.price}€<br></br>
 //             <Button variant="secondary" onClick={() => {
 
-//               //onclick, crée un object avec infos du meuble...
-//               const object = {
-//                 id: item._id,
-//                 title: item.title,
-//                 price: item.price
-//               };
+            //   //onclick, crée un object avec infos du meuble...
+            //   const object = {
+            //     id: item._id,
+            //     title: item.title,
+            //     price: item.price
+            //   };
 
-//               //...et mets à jour "cart" en rajoutant à la fin de la liste le dernier object cliqué
-//               setCart((oldCart) => [...oldCart, object])
+            //   //...et mets à jour "cart" en rajoutant à la fin de la liste le dernier object cliqué
+            //   setCart((oldCart) => [...oldCart, object])
 
 //             }}>Add to cart</Button>
 //           </Card.Footer>

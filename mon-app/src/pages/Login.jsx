@@ -71,7 +71,7 @@ function Login() {
           <p>La connexion n'a pas réusssi, retentez votre coup !</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={handleCloseError}>
+          <Button variant="outline-dark" onClick={handleCloseError}>
             Fermer
           </Button>
         </Modal.Footer>
@@ -102,10 +102,10 @@ function Login() {
                 autoFocus
               />
             </Form.Group>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="outline-dark" onClick={handleClose}>
               Fermer
             </Button>
-            <Button variant="primary" type="submit" value="Sign in">
+            <Button variant="outline-dark" type="submit" value="Sign in">
               Se connecter
             </Button>
           </Form>

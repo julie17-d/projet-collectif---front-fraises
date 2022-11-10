@@ -151,7 +151,7 @@ function Signup() {
                 autoFocus
               />
             </Form.Group>
-            <Button variant="secondary" onClick={handleClose}>
+            <Button variant="outline-dark" onClick={handleClose}>
               Fermer
             </Button>
             <Button variant="outline-dark" type="submit" value="Sign up">
