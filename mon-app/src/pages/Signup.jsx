@@ -40,7 +40,7 @@ function Signup() {
     axios
       .post("http://localhost:3001/api/auth/signup", {user})
       .then((res) => {
-        handleClose();
+        handleCloseSuccess();
         handleShowSuccess();
         return res;
       })
@@ -53,7 +53,7 @@ function Signup() {
   return (
     <>
       <Button variant="outline-info" onClick={handleShow}>
-        Sign up
+        S'inscrire
       </Button>
 
       <Modal show={showSuccess} onHide={handleCloseSuccess}>
@@ -66,7 +66,7 @@ function Signup() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="success" onClick={handleCloseSuccess}>
-            Close
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>
@@ -80,49 +80,49 @@ function Signup() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="warning" onClick={handleCloseError}>
-            Close
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Sign up</Modal.Title>
+          <Modal.Title>S'inscrire</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Your first name</Form.Label>
+              <Form.Label>Prénom</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="First name"
+                placeholder="John"
                 name="firstName"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Your last name</Form.Label>
+              <Form.Label>Nom</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Last name"
+                placeholder="Doe"
                 name="lastName"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-              <Form.Label>Your Address</Form.Label>
+              <Form.Label>Adresse postale</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Address"
+                placeholder="116 rue du Faubourg St Martin, 75010 Paris"
                 name="address"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-              <Form.Label>Mobile number</Form.Label>
+              <Form.Label>Mobile</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="xx xx xx xx xx"
@@ -132,30 +132,30 @@ function Signup() {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Adresse mail</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="name@example.com"
+                placeholder="johndoe@example.com"
                 name="email"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="password"
+                placeholder="votremotdepasse"
                 name="password"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Button variant="secondary" onClick={handleClose}>
-              Close
+              Fermer
             </Button>
             <Button variant="primary" type="submit" value="Sign up">
-              Sign up
+              S'inscrire
             </Button>
           </Form>
         </Modal.Body>

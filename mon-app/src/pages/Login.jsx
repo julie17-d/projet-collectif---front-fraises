@@ -47,7 +47,7 @@ function Login() {
   return (
     <>
       <Button variant="outline-info" onClick={handleShow}>
-        Sign in
+        Se connecter
       </Button>
       <Modal show={showSuccess} onHide={handleCloseSuccess}>
         <Modal.Header closeButton>
@@ -59,7 +59,7 @@ function Login() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="success" onClick={handleCloseSuccess}>
-            Close
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>
@@ -72,18 +72,18 @@ function Login() {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="warning" onClick={handleCloseError}>
-            Close
+            Fermer
           </Button>
         </Modal.Footer>
       </Modal>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Sign in</Modal.Title>
+          <Modal.Title>Se connecter</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Adresse mail</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="name@example.com"
@@ -93,20 +93,20 @@ function Login() {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.Control">
-              <Form.Label>Password</Form.Label>
+              <Form.Label>Mot de passe</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="password"
+                placeholder="motdepasse"
                 name="password"
                 onChange={handleChange}
                 autoFocus
               />
             </Form.Group>
             <Button variant="secondary" onClick={handleClose}>
-              Close
+              Fermer
             </Button>
             <Button variant="primary" type="submit" value="Sign in">
-              Sign in
+              Se connecter
             </Button>
           </Form>
         </Modal.Body>
