@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <Container fluid>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Navbar.Brand href="#home">
           <img
             src="./Logo.png"
@@ -29,17 +29,17 @@ function Header() {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
-        <Nav.Link href="/">Anciens meubles pour une nouvelle vie</Nav.Link>
+        <Nav.Link href="/">
+          Anciens Meubles <br></br>Pour Une Nouvelle Vie
+        </Nav.Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav" variant="outline-dark">
           <Nav className="me-auto"></Nav>
           {user.userId === "636cc8e2eef732132cc57a9a" ? (
             <Nav>
-              <Nav>
-                <Nav.Link href="/admin">
-                  <Button variant="outline-light">Page admin</Button>
-                </Nav.Link>
-              </Nav>
+              <Nav.Link href="/admin">
+                <Button variant="outline-dark">Page admin</Button>
+              </Nav.Link>
             </Nav>
           ) : null}
           {!localStorage.getItem("user-info") ? (

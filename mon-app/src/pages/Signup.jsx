@@ -52,8 +52,8 @@ function Signup() {
 
   return (
     <>
-      <Button variant="outline-info" onClick={handleShow}>
-        S'inscrire
+      <Button variant="outline-dark" onClick={handleShow}>
+        Sign up
       </Button>
 
       <Modal show={showSuccess} onHide={handleCloseSuccess}>
@@ -65,8 +65,8 @@ function Signup() {
           <p>Vous pouvez désormais vous connecter au site.</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleCloseSuccess}>
-            Fermer
+          <Button variant="outline-dark" onClick={handleCloseSuccess}>
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
@@ -79,8 +79,8 @@ function Signup() {
           <p>L'inscription n'a pas réusssi, retentez votre coup !</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="warning" onClick={handleCloseError}>
-            Fermer
+          <Button variant="outline-dark" onClick={handleCloseError}>
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
@@ -154,8 +154,8 @@ function Signup() {
             <Button variant="secondary" onClick={handleClose}>
               Fermer
             </Button>
-            <Button variant="primary" type="submit" value="Sign up">
-              S'inscrire
+            <Button variant="outline-dark" type="submit" value="Sign up">
+              Sign up
             </Button>
           </Form>
         </Modal.Body>

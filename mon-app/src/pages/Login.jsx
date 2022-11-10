@@ -46,8 +46,8 @@ function Login() {
 
   return (
     <>
-      <Button variant="outline-info" onClick={handleShow}>
-        Se connecter
+      <Button variant="outline-dark" onClick={handleShow}>
+        Sign in
       </Button>
       <Modal show={showSuccess} onHide={handleCloseSuccess}>
         <Modal.Header closeButton>
@@ -58,8 +58,8 @@ function Login() {
           <p>Vous pouvez désormais naviguer dans le site.</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="success" onClick={handleCloseSuccess}>
-            Fermer
+          <Button variant="outline-dark" onClick={handleCloseSuccess}>
+            Close
           </Button>
         </Modal.Footer>
       </Modal>

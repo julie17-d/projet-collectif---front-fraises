@@ -5,6 +5,10 @@ import AllFurnitures from "../components/AllFurnitures";
 import Footer from "../components/Footer";
 
 const Admin = () => {
+    let user = "";
+    if(JSON.parse(localStorage.getItem("user-info"))!==null){
+        user = JSON.parse(localStorage.getItem("user-info"));
+    };
     return (
         <div className="App">
             <header className="App-header">
@@ -14,13 +18,16 @@ const Admin = () => {
             </header>
 
             <body className="App-body">
-                <div className="container">
-                    <h1>Bienvenue sur la page admin</h1>
-                    <div className="categories-admin">
-                        <AllFurnitures />
-                        <Users />
-                    </div>
+                {user.userId === "636cc8e2eef732132cc57a9a" ? (
+            <div className="container">
+                <h1>Bienvenue sur la page admin</h1>
+                <div className="categories-admin">
+                    <AllFurnitures />
+                    <Users />
                 </div>
+            </div>
+            ) : <h1>Cette page est réservée à l'administratrice du site. 😡</h1>}
+                
                 <Footer />
             </body>
         </div>

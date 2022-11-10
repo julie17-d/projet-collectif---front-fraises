@@ -10,7 +10,7 @@ function Cart(props) {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+      <Button variant="outline-dark" onClick={handleShow}>
         Panier
       </Button>
 

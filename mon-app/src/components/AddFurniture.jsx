@@ -115,7 +115,7 @@ function AddFurniture() {
 
   return (
     <>
-      <Button variant="outline-info" onClick={handleShow}>
+      <Button variant="outline-dark" onClick={handleShow}>
         Ajouter un meuble
       </Button>
 
