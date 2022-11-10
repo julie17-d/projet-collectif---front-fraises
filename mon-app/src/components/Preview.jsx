@@ -5,7 +5,7 @@ import Cart from "./Cart";
 
 const Preview = ({ furniture }) => {
     return (
-            <Card style={{ width: '24rem' }} className='card' border="dark" bg="dark" text="light">
+            <Card style={{ width: '24rem' }} className='card' border="secondary" bg="light" text="dark">
                 <Card.Header>
                     <Card.Title>
                         <h3>{furniture.title}</h3>
