@@ -1,7 +1,7 @@
 import React from "react";
 import FurnituresBis from "../components/FurnituresBis";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer"
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -13,45 +13,23 @@ const Home = () => {
     //   return (meuble.title + " " + meuble.price + "€")
     // })
 
-<<<<<<< HEAD
     <div className="App">
       <header className="App-header">
         <Navbar />
+
         {/* passe la const displayCartContent comme propriété de Cart pour afficher les meubles à l'intérieur du panier */}
         {/* <Cart cart={displayCartContent} /> */}
       </header>
+
       <body className="App-body">
         {/* affiche meubles dans une grid */}
         {/* <Row xs={1} md={3} className="gridCards"> */}
         <FurnituresBis />
         {/* </Row> */}
+        <Footer />
       </body>
     </div>
   );
-=======
-        <div className="App">
-
-
-            <header className="App-header">
-            <Navbar />
-
-            {/* passe la const displayCartContent comme propriété de Cart pour afficher les meubles à l'intérieur du panier */}
-            {/* <Cart cart={displayCartContent} /> */}
-
-            </header>
-
-            <body className="App-body">
-
-            {/* affiche meubles dans une grid */}
-            {/* <Row xs={1} md={3} className="gridCards"> */}
-            <FurnituresBis />
-            {/* </Row> */}
-            <Footer />
-
-            </body>
-        </div>
-    );
->>>>>>> main
 };
 
 export default Home;
