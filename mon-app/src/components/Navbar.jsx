@@ -14,7 +14,7 @@ function Header() {
   // console.log(user.firstName);
   function logOut() {
     localStorage.clear();
-    window.location.reload();
+    window.location.href = "/home";
   }
   /*const [furnitures, cartContent] = Furnitures();*/
   return (
