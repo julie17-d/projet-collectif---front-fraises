@@ -60,7 +60,7 @@ const FurnituresBis = () => {
             </div>
             <div className="price">
                 <Form.Label ><h5>Prix :</h5></Form.Label>
-                <Form.Range
+                <Form.Range 
                     id="rangePrice"
                     name="rangePrice"
                     type="range"
@@ -69,7 +69,7 @@ const FurnituresBis = () => {
                     step="100"
                     defaultValue={rangeValue}
                     onChange={(e) => setRangeValue(e.target.value)}
-                    variant = "outline-dark"
+                    variant = "secondary"
                 />
                 <Form.Text muted>jusqu'à {rangeValue} €</Form.Text>
                 {/* <label for="rangePrice">Prix :<br />jusqu'à {rangeValue} €</label> */}

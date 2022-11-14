@@ -38,12 +38,7 @@ function Header() {
         <Navbar.Collapse  id="responsive-navbar-nav" variant="outline-dark">
           <Nav className="me-auto">
           </Nav>
-          <Nav.Link>
-          <Cart />
-          </Nav.Link>
-          {/* <Nav.Link>
-            <CartContent />
-          </Nav.Link> */}
+          
           {user.userId === "636cc8e2eef732132cc57a9a" ? (
             <Nav>
               <Nav.Link href="/admin">
@@ -59,6 +54,7 @@ function Header() {
           ) : null}
           {localStorage.getItem("user-info") ? (
             <Nav>
+              <Cart />
               {AddFurniture()}
               <NavDropdown title={user.firstName}>
                 <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>

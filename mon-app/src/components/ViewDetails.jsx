@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Button from 'react-bootstrap/esm/Button';
 import Modal from "react-bootstrap/Modal";
 import AddToCart from "./AddToCart";
@@ -30,7 +30,7 @@ const ViewDetails = ({ furniture }) => {
                 <div>
                  <h3>{furniture.title}</h3>
                 <div>
-                    <img src={furniture.pictureUrl} class="img-fluid" alt={furniture.title}/> </div>
+                    <img src={furniture.pictureUrl} class="img-fluid"/> </div>
                 </div>
                 <p> <strong>Type : </strong>{furniture.type}</p>
                 <p><strong>Description : </strong>{furniture.description}</p>
@@ -45,8 +45,10 @@ const ViewDetails = ({ furniture }) => {
             </Modal.Body>   
             <Modal.Footer>
               <strong>  {furniture.price.toLocaleString()} € </strong> <br />
-                <AddToCart>Ajouter au panier</AddToCart>
-
+                
+                {localStorage.getItem("user-info") ? (
+                    <AddToCart>Ajouter au panier</AddToCart>
+          ) : null}
             </Modal.Footer>  
         </Modal>
         </> )

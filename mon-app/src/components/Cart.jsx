@@ -37,7 +37,7 @@ function Cart() {
           ) : null}
       </div>
       <div>
-      <Button variant="secondary">Valider mon panier et payer</Button>
+      <Button variant="outline-dark">Valider mon panier et payer</Button>
       </div>
         
         </Offcanvas.Body>
