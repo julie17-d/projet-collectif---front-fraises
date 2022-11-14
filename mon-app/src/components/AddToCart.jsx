@@ -33,7 +33,7 @@ const AddToCart = ({ furniture }) => {
             <Modal.Header closeButton>
             </Modal.Header>
             <Modal.Body>
-                <h2>Vous avez bien ajouté l'élément {furniture.title} au panier.</h2>
+                <h2>Vous avez bien ajouté l'élément <strong>{furniture.title}</strong> au panier.</h2>
                 <Cart>Voir mon panier</Cart>
             </Modal.Body>
         </Modal>
