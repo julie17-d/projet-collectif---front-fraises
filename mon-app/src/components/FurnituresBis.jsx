@@ -65,7 +65,7 @@ const FurnituresBis = () => {
                     name="rangePrice"
                     type="range"
                     min="0"
-                    max="3000"
+                    max="1000000"
                     step="100"
                     defaultValue={rangeValue}
                     onChange={(e) => setRangeValue(e.target.value)}
