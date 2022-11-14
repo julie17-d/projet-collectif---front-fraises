@@ -44,11 +44,10 @@ const ViewDetails = ({ furniture }) => {
                 </ul></p>
             </Modal.Body>   
             <Modal.Footer>
-              <strong>  {furniture.price.toLocaleString()} € </strong> <br />
-                
+                <strong>  {furniture.price.toLocaleString()} € </strong> <br />
                 {localStorage.getItem("user-info") ? (
-                    <AddToCart>Ajouter au panier</AddToCart>
-          ) : null}
+                    <AddToCart furniture={furniture}>Ajouter au panier</AddToCart>
+                ) : null}
             </Modal.Footer>  
         </Modal>
         </> )
