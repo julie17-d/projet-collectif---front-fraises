@@ -19,6 +19,14 @@ const ChangeStatus = ({ furniture }) => {
         action = "Vous ne pouvez pas modifier le status";
     }
 
+    const arrayToString = (array) =>{
+        let arrToStr = "";
+        for (let i =0; i<array.length; i++){
+            arrToStr += array[i].charAt(0).toUpperCase() + array[i].slice(1) + " ";
+        }
+            return arrToStr;
+    };
+
     const changeStatus = (event) => {
         if(furniture.status.onSale===true){
             body = {id: furniture._id, onSale: false, sold: true};
@@ -54,10 +62,16 @@ const ChangeStatus = ({ furniture }) => {
             <Modal.Body>
                 <h3>Êtes-vous sûr·e de vouloir changer le statut de l'élément suivant ?</h3>
                 <img class="img-fluid" src={furniture.pictureUrl} alt={furniture.title}/>
-                <p><strong>Type : </strong>{furniture.type}</p>
+                <p> <strong>Type : </strong>{furniture.type}</p>
                 <p><strong>Description : </strong>{furniture.description}</p>
-                <p><strong>Couleur : </strong>{furniture.colors}</p>
-                <p><strong>Prix : </strong>{furniture.price} €</p>
+                <p><strong>Couleur: </strong>{furniture.colors}</p>
+                <p><strong>Matériaux : </strong>{arrayToString(furniture.materials)}</p>
+                <p><strong>Dimensions : </strong>
+                <ul> <li>Hauteur (cm) : {furniture.dimensions_cm.height}</li>
+                    <li>Largeur (cm) : {furniture.dimensions_cm.width}</li>
+                    <li>Profondeur (cm) : {furniture.dimensions_cm.depth}</li>
+
+                </ul></p>
             </Modal.Body>   
             <Modal.Footer>
                 <Button variant="outline-dark" onClick={changeStatus}>
