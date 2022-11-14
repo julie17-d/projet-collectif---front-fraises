@@ -16,7 +16,7 @@ const ChangeStatus = ({ furniture }) => {
     } else if(furniture.status.pending===true){
         action = "Passer en ligne";
     } else if(furniture.status.sold===true){
-        action = "Vous ne pouvez pas modifier le status";
+        action = "Vous ne pouvez pas modifier le statut";
     }
 
     const arrayToString = (array) =>{
