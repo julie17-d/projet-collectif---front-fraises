@@ -20,7 +20,9 @@ const Preview = ({ furniture }) => {
                 <Card.Footer>
                     {furniture.price.toLocaleString()} € <br />
                     <ViewDetails furniture={furniture} />
-                    <AddToCart furniture={furniture} />
+                    {localStorage.getItem("user-info") ? (
+                    <AddToCart furniture={furniture}>Ajouter au panier</AddToCart>
+                ) : null}
                 </Card.Footer>
             </Card>
     );
